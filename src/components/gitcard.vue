@@ -15,7 +15,7 @@ const props = defineProps({
                 <h1 class="title">{{ props.data.title }}</h1>
                 <p class="description">{{ props.data.description }}</p>
                 <div class="languages">
-                    <img v-for="tag in props.data.tags" :src="tag.icon" :alt="tag.alt" />
+                    <img v-for="tag in props.data.tags" v-bind:src="tag.icon" :alt="tag.alt" />
                 </div>
             </div>
     </a>
