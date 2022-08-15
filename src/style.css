@@ -1,0 +1,13 @@
+:root {
+    --primary-accent: #844ca3;
+    --secondary-accent: #861e3f;
+    --main-color: #061f3e;
+}
+
+body {
+    background-color: #061f3e;
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
