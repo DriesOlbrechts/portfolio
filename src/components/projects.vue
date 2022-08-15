@@ -30,7 +30,8 @@ import {Cards, Categories} from '../static/cards'
 .container {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 5rem;
+    padding-top: 5rem;
+    box-sizing: border-box;
 }
 
 .column {

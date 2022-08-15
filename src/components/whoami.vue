@@ -24,9 +24,15 @@ import VueFeather from 'vue-feather';
 
 <style scoped>
 .icons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin: auto;
     margin-bottom: 1rem;
     width: 20rem;
@@ -40,7 +46,8 @@ import VueFeather from 'vue-feather';
 }
 
 .icons > a:hover{
-    filter: drop-shadow(0 0 0.7rem rgb(255,255,255));
+    -webkit-filter: drop-shadow(0 0 0.7rem rgb(255,255,255));
+            filter: drop-shadow(0 0 0.7rem rgb(255,255,255));
 }
 
 .greeting {
@@ -53,13 +60,21 @@ import VueFeather from 'vue-feather';
 
 .subtitle {
     width: 20rem;
-    filter: brightness(75%);
+    -webkit-filter: brightness(75%);
+            filter: brightness(75%);
     font-size: 2rem;
     overflow: hidden;
     white-space: nowrap;
     border-right: 0.15rem solid var(--primary-accent);
     padding-right: 0.5rem;
-    animation: typing 2s steps(40, end),blink 1s step-end infinite;
+    -webkit-animation: typing 2s steps(40, end),blink 1s step-end infinite;
+            animation: typing 2s steps(40, end),blink 1s step-end infinite;
+}
+
+
+
+@-webkit-keyframes typing {
+    from {width: 0}
 }
 
 
@@ -67,45 +82,16 @@ import VueFeather from 'vue-feather';
 @keyframes typing {
     from {width: 0}
 }
-@keyframes blink {
+@-webkit-keyframes blink {
 
     50% {
        border-color: transparent; 
     }
 }
-@-moz-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
+@keyframes blink {
 
-@-webkit-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
-
-@-ms-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
-}
-
-@-o-keyframes blink {
-  from, to {
-    color: transparent;
-  }
-  50% {
-    color: inherit;
-  }
+    50% {
+       border-color: transparent; 
+    }
 }
 </style>

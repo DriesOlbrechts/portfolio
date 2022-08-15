@@ -4,7 +4,7 @@ import Projects from './projects.vue';
 </script>
 
 <template>
-    <div class="container">
+    <div class="container" id="scroller">
         <section>
             <Whoami></Whoami>
         </section>
@@ -18,27 +18,41 @@ import Projects from './projects.vue';
 .container {
     width: 100vw;
     height: 100vh;
+    -ms-scroll-snap-type: y mandatory;
     scroll-snap-type: y mandatory;
     overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
 .container>section {
 
     scroll-snap-align: start;
+    scroll-snap-stop: always;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     width: 100vw;
     height: 100vh;
+    background-size: contain;
 }
 
 .container>section:nth-of-type(1) {
     background-image: url("../assets/waves.svg");
+    background-size: cover;
 }
 
 .container>section:nth-of-type(2) {
     --background: #6d1d3e;
     --background-darker: #3a0017;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, var(--background)), to(var(--background-darker)));
+    background: -o-linear-gradient(var(--background) 30%, var(--background-darker));
     background: linear-gradient(var(--background) 30%, var(--background-darker));
 }
 </style>

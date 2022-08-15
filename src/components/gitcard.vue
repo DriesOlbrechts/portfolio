@@ -11,13 +11,13 @@ const props = defineProps({
 
 <template>
     <a :href="props.data.link">
-            <div class="card">
-                <h1 class="title">{{ props.data.title }}</h1>
-                <p class="description">{{ props.data.description }}</p>
-                <div class="languages">
-                    <img v-for="tag in props.data.tags" v-bind:src="tag.icon" :alt="tag.alt" />
-                </div>
+        <div class="card">
+            <h1 class="title">{{ props.data.title }}</h1>
+            <p class="description">{{ props.data.description }}</p>
+            <div class="languages">
+                <img v-for="tag in props.data.tags" v-bind:src="tag.icon" :alt="tag.alt" />
             </div>
+        </div>
     </a>
 </template>
 
@@ -35,8 +35,15 @@ a {
     height: 12rem;
     border-radius: 1.3rem;
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-transition: all ease-in-out 0.1s;
+    -o-transition: all ease-in-out 0.1s;
     transition: all ease-in-out 0.1s;
     border: 0.2rem solid var(--primary-accent);
 
@@ -53,27 +60,38 @@ a {
 
 .description {
     padding-top: 1rem;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
     flex-grow: 1;
 }
 
 .languages {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    -webkit-box-pack: end;
     height: 2rem;
+    -ms-flex-pack: end;
     justify-content: end;
 }
 
 .languages>img {
     padding-left: 1rem;
+    width: 2rem;
 }
 
 .cardhover {
     width: 100%;
 }
 
-a:hover > .card{
+a:hover>.card {
     margin-top: -10px;
     margin-bottom: 10px;
+    -webkit-box-shadow: 1rem 1rem var(--secondary-accent);
     box-shadow: 1rem 1rem var(--secondary-accent);
 }
 </style>
