@@ -4,10 +4,12 @@ import VueFeather from 'vue-feather';
 
 <template>
     <div class="container">
-        <div class="text">
-            <p class="greeting">Hi, my name is</p>
-            <h1 class="name">Dries Olbrechts</h1>
-            <h1 class="subtitle">A full stack developer</h1>
+        <div class="main">
+            <div class="text">
+                <p class="greeting">Hi, my name is</p>
+                <h1 class="name">Dries Olbrechts</h1>
+                <h1 class="subtitle">A full stack developer</h1>
+            </div>
             <div class="icons">
                 <a href="https://github.com/Dries1234">
                     <vue-feather type="github"></vue-feather>
@@ -33,6 +35,11 @@ import VueFeather from 'vue-feather';
     flex-direction: column;
     align-items: center;
 }
+@media screen and (max-width: 470px){
+ .text {
+        margin-left: 2rem;
+    }
+}
 
 .icons {
     display: -webkit-box;
@@ -50,7 +57,7 @@ import VueFeather from 'vue-feather';
     margin-top: 5rem;
 }
 
-.text {
+.main {
     margin: auto;
     width: fit-content;
 }

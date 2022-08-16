@@ -32,6 +32,7 @@ import {Cards, Categories} from '../static/cards'
     justify-content: space-evenly;
     padding-top: 5rem;
     box-sizing: border-box;
+    flex-wrap: wrap;
 }
 
 .column {
@@ -39,6 +40,7 @@ import {Cards, Categories} from '../static/cards'
     flex-direction: column;
     align-items:center;
     width: 18%;
+    min-width: 20rem;
 }
 
 .column>* {
