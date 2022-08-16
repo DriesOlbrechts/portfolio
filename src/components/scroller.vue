@@ -5,30 +5,50 @@ import Projects from './projects.vue';
 
 <template>
     <div class="container" id="scroller">
-        <section>
+        <div>
             <Whoami></Whoami>
-        </section>
-        <section>
+        </div>
+        <div>
             <Projects></Projects>
-        </section>
+        </div>
     </div>
 </template>
+<script lang="ts">
+import createScrollSnap from 'scroll-snap'
+
+export default {
+    data() {
+        return {
+            scrolled: ''
+        }
+    },
+    mounted() {
+
+        this.$nextTick(() => {
+            const element = document.getElementById('scroller')
+
+            const { bind, unbind } = createScrollSnap(element!, {
+                snapDestinationY: '100%',
+                timeout: 0,
+                duration: 300,
+                threshold: 0.01,
+                snapStop: false,
+            }, () => console.log('snapped'))
+        });
+    },
+}
+
+</script>
 
 <style scoped>
 .container {
     width: 100vw;
     height: 100vh;
-    -ms-scroll-snap-type: y mandatory;
-    scroll-snap-type: y mandatory;
     overflow-y: scroll;
     overflow-x: hidden;
-    scroll-behavior: smooth;
 }
 
-.container>section {
-
-    scroll-snap-align: start;
-    scroll-snap-stop: always;
+.container>div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -43,12 +63,12 @@ import Projects from './projects.vue';
     background-size: contain;
 }
 
-.container>section:nth-of-type(1) {
+.container>div:nth-of-type(1) {
     background-image: url("../assets/waves.svg");
     background-size: cover;
 }
 
-.container>section:nth-of-type(2) {
+.container>div:nth-of-type(2) {
     --background: #6d1d3e;
     --background-darker: #3a0017;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, var(--background)), to(var(--background-darker)));
