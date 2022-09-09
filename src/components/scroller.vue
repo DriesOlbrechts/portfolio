@@ -33,7 +33,7 @@ export default {
                 duration: 300,
                 threshold: 0.01,
                 snapStop: false,
-            }, () => console.log('snapped'))
+            })
         });
     },
 }
