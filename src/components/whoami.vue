@@ -82,7 +82,7 @@ import VueFeather from 'vue-feather';
 }
 
 .subtitle {
-    width: 20rem;
+    width: fit-content;
     -webkit-filter: brightness(75%);
     filter: brightness(75%);
     font-size: 2rem;
