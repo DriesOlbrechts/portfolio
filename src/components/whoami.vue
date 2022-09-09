@@ -23,6 +23,7 @@ import VueFeather from 'vue-feather';
             </div>
         </div>
         <div class="arrows">
+            <p>scroll down</p>
             <vue-feather type="chevrons-down"></vue-feather>
         </div>
     </div>
@@ -98,6 +99,9 @@ import VueFeather from 'vue-feather';
 .arrows>i {
     width: 5rem;
     animation: glowing 1s steps(20) infinite alternate;
+    opacity: 75%;
+}
+.arrows>p{
     opacity: 75%;
 }
 
