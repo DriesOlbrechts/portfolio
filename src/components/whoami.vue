@@ -35,8 +35,9 @@ import VueFeather from 'vue-feather';
     flex-direction: column;
     align-items: center;
 }
-@media screen and (max-width: 470px){
- .text {
+
+@media screen and (max-width: 470px) {
+    .text {
         margin-left: 2rem;
     }
 }
@@ -82,7 +83,7 @@ import VueFeather from 'vue-feather';
 }
 
 .subtitle {
-    width: fit-content;
+    width: 20rem;
     -webkit-filter: brightness(75%);
     filter: brightness(75%);
     font-size: 2rem;
@@ -109,6 +110,10 @@ import VueFeather from 'vue-feather';
 @-webkit-keyframes typing {
     from {
         width: 0
+    }
+
+    to {
+        min-width: fit-content;
     }
 }
 
