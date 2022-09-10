@@ -23,7 +23,6 @@ import VueFeather from 'vue-feather';
             </div>
         </div>
         <div class="arrows">
-            <p>scroll down</p>
             <vue-feather type="chevrons-down"></vue-feather>
         </div>
     </div>
