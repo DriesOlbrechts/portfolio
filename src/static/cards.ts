@@ -62,6 +62,13 @@ export const Cards: Card[] = [
         category: Categories.OTHER,
         link: "https://github.com/Dries1234/app-dev-project"
     },
+	{
+		title: "Dotfiles",
+		description: "The config files for my entire setup are public.",
+		tags: [Tags.neovim, Tags.shell, Tags.lua],
+		category: Categories.OTHER, 
+		link: "https://github.com/Dries1234/.dotfiles"
+	}
 ]
 
 

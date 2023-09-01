@@ -43,4 +43,16 @@ export const Tags = {
         icon: 'assets/icons/php.svg',
         alt: 'php'
     },
+    neovim: {
+        icon: 'assets/icons/neovim.svg',
+        alt: 'neovim'
+    },
+    shell: {
+        icon: 'assets/icons/bash.svg',
+        alt: 'bash'
+    },
+    lua: {
+        icon: 'assets/icons/lua.svg',
+        alt: 'lua'
+    },
 }

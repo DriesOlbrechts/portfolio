@@ -4,7 +4,7 @@ import {Cards, Categories} from '../static/cards'
 </script>
 
 <template>
-        <div class="container">
+        <div id="projects" class="container">
             <div class="column">
                 <div class="columntitle">
                     <h1>Web Development</h1>
