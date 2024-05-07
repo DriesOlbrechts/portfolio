@@ -18,14 +18,14 @@ export const Cards: Card[] = [
         description: "Website portfolio, you're looking at it!",
         tags: [Tags.vue, Tags.typescript, Tags.vite],
         category: Categories.WEBDEV,
-        link: "https://github.com/Dries1234/portfolio"
+        link: "https://github.com/DriesOlbrechts/portfolio"
     },
     {
         title: "Evaluator",
         description: "Discord bot for evaluating code snippets.",
         tags: [Tags.node, Tags.docker],
         category: Categories.OTHER,
-        link: "https://github.com/Dries1234/Evaluator"
+        link: "https://github.com/DriesOlbrechts/Evaluator"
     },
     {
         title: "Vlotcoaching website",
@@ -39,35 +39,35 @@ export const Cards: Card[] = [
         description: "Rust program that shows time and weather info at the top of your terminal.",
         tags: [Tags.rust],
         category: Categories.TERMINAL,
-        link: "https://github.com/Dries1234/motd"
+        link: "https://github.com/DriesOlbrechts/motd"
     },
     {
         title: "Webshop",
         description: "Webshop with PHP and MySQL.",
         tags: [Tags.php, Tags.mysql],
         category: Categories.WEBDEV,
-        link: "https://github.com/Dries1234/webshop"
+        link: "https://github.com/DriesOlbrechts/webshop"
     },
     {
         title: "Tirecenter",
         description: "School project CLI to manage a tirecenter. Focused on learning Object Oriented Programming in C++.",
         tags: [Tags.cpp],
         category: Categories.TERMINAL,
-        link: "https://github.com/Dries1234/oop-project"
+        link: "https://github.com/DriesOlbrechts/oop-project"
     },
     {
         title: "Foodchecker",
         description: "An android app that provides information about scanned barcodes.",
         tags: [Tags.kotlin],
         category: Categories.OTHER,
-        link: "https://github.com/Dries1234/app-dev-project"
+        link: "https://github.com/DriesOlbrechts/app-dev-project"
     },
 	{
 		title: "Dotfiles",
 		description: "The config files for my entire setup are public.",
 		tags: [Tags.neovim, Tags.shell, Tags.lua],
 		category: Categories.OTHER, 
-		link: "https://github.com/Dries1234/.dotfiles"
+		link: "https://github.com/DriesOlbrechts/.dotfiles"
 	}
 ]
 
