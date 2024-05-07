@@ -17,7 +17,7 @@ function scroll() {
 				<h1 class="subtitle">Full stack developer</h1>
 			</div>
 			<div class="icons">
-				<a href="https://github.com/Dries1234">
+				<a href="https://github.com/DriesOlbrechts">
 					<vue-feather type="github"></vue-feather>
 				</a>
 				<a href="https://www.linkedin.com/in/dries-olbrechts">
